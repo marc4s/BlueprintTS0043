@@ -1,4 +1,4 @@
-blueprint (new one without Action):
+blueprint:
   name: Zigbee2MQTT - Tuya 2-Button Scene Switch 2501-01
   description: Automate your Tuya 2-Button Scene Switch via Zigbee2MQTT.
   domain: automation
@@ -49,27 +49,27 @@ blueprint (new one without Action):
 mode: restart
 max_exceeded: silent
 trigger:
-- platform: state
-  entity_id: !input 'switch'
+  - platform: state
+    entity_id: !input 'switch'
 action:
-- variables:
-    command: '{{ trigger.to_state.state }}'
-- choose:
-  - conditions:
-    - '{{ command == ''1_single'' }}'
-    sequence: !input 'button_one_short_press'
-  - conditions:
-    - '{{ command == ''2_single'' }}'
-    sequence: !input 'button_two_short_press'
-  - conditions:
-    - '{{ command == ''1_double'' }}'
-    sequence: !input 'button_one_double_press'
-  - conditions:
-    - '{{ command == ''2_double'' }}'
-    sequence: !input 'button_two_double_press'
-  - conditions:
-    - '{{ command == ''1_hold'' }}'
-    sequence: !input 'button_one_long_press'
-  - conditions:
-    - '{{ command == ''2_hold'' }}'
-    sequence: !input 'button_two_long_press'
+  - variables:
+      command: '{{ trigger.to_state.state }}'
+  - choose:
+      - conditions:
+          - '{{ command == ''1_single'' }}'
+        sequence: !input 'button_one_short_press'
+      - conditions:
+          - '{{ command == ''2_single'' }}'
+        sequence: !input 'button_two_short_press'
+      - conditions:
+          - '{{ command == ''1_double'' }}'
+        sequence: !input 'button_one_double_press'
+      - conditions:
+          - '{{ command == ''2_double'' }}'
+        sequence: !input 'button_two_double_press'
+      - conditions:
+          - '{{ command == ''1_hold'' }}'
+        sequence: !input 'button_one_long_press'
+      - conditions:
+          - '{{ command == ''2_hold'' }}'
+        sequence: !input 'button_two_long_press'
