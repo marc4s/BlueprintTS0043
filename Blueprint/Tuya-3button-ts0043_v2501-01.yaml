@@ -1,11 +1,11 @@
 blueprint:
-  name: Zigbee2MQTT - Tuya 2-Button Scene Switch 2501-01
-  description: Automate your Tuya 2-Button Scene Switch via Zigbee2MQTT.
+  name: Zigbee2MQTT - Tuya 3-Button Scene Switch 2501-01
+  description: Automate your Tuya 3-Button Scene Switch via Zigbee2MQTT.
   domain: automation
   input:
     switch:
-      name: Tuya 2-Button Scene Switch
-      description: Tuya 2-Button Scene Switch to use
+      name: Tuya 3-Button Scene Switch
+      description: Tuya 3-Button Scene Switch to use
       selector:
         entity:
           integration: mqtt
