@@ -10,19 +10,19 @@ blueprint:
         entity:
           integration: mqtt
           domain: sensor
-    button_one_short_press:
+    button_short_press:
       name: Single Press - Button 1
       description: Action to run on button 1 (lower-left) single press
       default: []
       selector:
         action: {}
-    button_one_double_press:
+    button_double_press:
       name: Double Press - Button 1
       description: Action to run on button 1 (lower-left) double press
       default: []
       selector:
         action: {}
-    button_one_long_press:
+    button_long_press:
       name: Long Press - Button 1
       description: Action to run on button 1 (lower-left) long press
       default: []
